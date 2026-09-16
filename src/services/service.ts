@@ -8,7 +8,7 @@ import { UserResponse } from "../models/user-response";
 })
 export class Service {
   private readonly http = inject(HttpClient);
-  private readonly url: string = 'http://localhost:8080/api/user';
+  private readonly url: string = 'https://td-agile-backend-611823307251.europe-west1.run.app/api/user';
 
   public createUser(user: UserRequest ) {
     return this.http.post<UserResponse>(this.url, user);
